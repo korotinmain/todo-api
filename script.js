@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const http = require('http');
 const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
@@ -79,6 +78,6 @@ app.patch('/change-state/:id', (req, res) => {
   }
 });
 
-http.createServer().listen(process.env.PORT || 5000).on('request', (req, res) => {
-    console.log('Server has started')
-});
+app.listen(3000, function () {
+    console.log(`Server has been started`);
+   });
