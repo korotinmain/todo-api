@@ -80,5 +80,5 @@ app.patch('/change-state/:id', (req, res) => {
 });
 
 http.createServer().listen(process.env.PORT || 5000).on('request', (req, res) => {
-    res.end('Server has started')
+    console.log('Server has started')
 });
